@@ -84,6 +84,7 @@ public class pixmapProject extends Application {
 	   
 	    supp.setOnAction((event) -> {
 	    	listechemin.clear();
+	    	graphicsOverlay.getGraphics().clear();
 
 	    	NewImage.supprimer();
 	    	stage.close();
@@ -114,15 +115,13 @@ public class pixmapProject extends Application {
         root.getChildren().add(Warning);
 
 
-       // root.getChildren().add(add);
-        //root.getChildren().add(supp);
-
+       
         Scene command=new Scene(root,500,100);
         st.setScene(command);
 	    stage.show();
 	    st.show();
 	  //create an ArcGISMap that defines the layers of data to view 
-	    map = new ArcGISMap();
+	    map = new ArcGISMap(Basemap.Type.NATIONAL_GEOGRAPHIC,43.92508530000001, 2.1486413000000084, 8);
 	    
 
 	    //make the basemap for streets

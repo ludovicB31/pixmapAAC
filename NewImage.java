@@ -57,6 +57,9 @@ public class NewImage extends pixmapProject {
 	public static void ajouter(){
 		
 		JFileChooser choix = new JFileChooser();
+		choix.setApproveButtonText("Ajouter");
+		choix.setDialogTitle("Ajouter une image à la carte");
+
 		int retour=choix.showOpenDialog(null);
 		if(retour==JFileChooser.APPROVE_OPTION){
 		   // un fichier a été choisi (sortie par OK)
@@ -77,7 +80,12 @@ public class NewImage extends pixmapProject {
 	}
 	
 	public static void supprimer(){
-		JFileChooser choix = new JFileChooser();
+		JFileChooser choix = new JFileChooser(System.getProperty("user.dir")+"/"+"bib/");
+		choix.setApproveButtonText("Supprimer");
+		choix.setDialogTitle("Supprimer une image de la carte");
+
+		//choix.setCurrentDirectory(System.getProperty("user.dir")+"/"+"bib/");
+
 		int retour=choix.showOpenDialog(null);
 		if(retour==JFileChooser.APPROVE_OPTION){
 		   // un fichier a été choisi (sortie par OK)
@@ -88,7 +96,9 @@ public class NewImage extends pixmapProject {
 		   entre.delete();
 		   pixmapProject.updateDelete();
 		     
-		}else {System.out.println("aucun fichier choisi");} ;// pas de fichier choisi
+		}else {System.out.println("aucun fichier choisi");
+		   pixmapProject.updateDelete();
+} ;// pas de fichier choisi
 	}
 	public static void on(){
 		Application.launch(pixmapProject.class);
