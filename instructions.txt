@@ -1,0 +1,6 @@
+Instructions:
+
+ -importer toutes les librairies requises (lire prérequi.txt)
+ -lancer pixmapProject.jar
+ -ajouter des images (une par une) ou en supprimer avec les boutton de la fenetre (commande pixmap)
+ - les fichier sur github n'inclue pas le repertoire "bib" à la racine du projet, il faut donc le créer manuellement

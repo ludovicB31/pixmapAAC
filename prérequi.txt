@@ -1,0 +1,5 @@
+Libairies externes requises:
+
+	-SDK ARCGIS map java --https://developers.arcgis.com/java/latest/guide/install-the-sdk.htm
+	-javaxt-core.jar
+	-jdk-8u121-xxx(selon systeme expoitation).tar.gz  --site web de Oracle java
